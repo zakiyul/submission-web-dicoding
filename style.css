@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&family=Shizuru&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Shizuru', cursive; */
+    /* font-family: 'Fredoka One', cursive; */
+}
+
+/* AWAL HEADER  */
+header{
+    /* background-color: darkseagreen; */
+    background-color: rgb(46, 36, 36);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: lightgreen;
+}
+nav li{
+    display: inline;
+    margin-right: 20px;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(61, 61, 61);
+}
+.logo p{
+     font-family: 'Fredoka One', cursive;
+}
+.logo span{
+    color:  white;
+}
+.bi{
+    margin-left: -300px;
+    position: absolute;
+}
+.jumbotron{
+    text-align: center;
+    font-size: 20px;
+    padding: 200px 0;
+    color: white;
+}
+.jumbotron h1{
+    color: darkseagreen;
+    font-family: 'Fredoka One', cursive;
+}
+/* AKHIR HEADER  */
+.overview{
+    text-align: center;
+}
+.overview-image{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.overview-image img{
+    width: 240px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    object-position: center;
+    transition: ease-in-out .3s all;
+}
+.overview-image img:hover{
+    transition: ease-in-out .3s all;
+    width: 200px;
+}
+.overview-image figure{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: -70px;
+    background-color: white;
+    /* padding: 12px; */
+    /* border: 1px solid rgb(228, 228, 228); */
+    border-radius: 16px;
+}
+.overview-image figcaption{
+    text-align: left;
+}
+
+@media screen and (max-width: 513px){
+    nav{
+        min-height: 50px;
+    }
+    nav ul{
+        display: none;
+    }
+    .bi{
+        margin-left: 0;
+        /* position: static; */
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        /* background-color: white; */
+        justify-content: space-between;
+    }
+    .logo i{
+        display: block;
+    }
+    .jumbotron{
+        background-color: gray;
+    }
+    .overview-image{
+        display: none;
+    }
+    .overview-image img{
+        margin-top: 0;
+    }
+}

@@ -40,10 +40,10 @@ nav a:hover{
 .logo span{
     color:  white;
 }
-header .bi{
+/* header .bi{
     margin-left: -300px;
     position: absolute;
-}
+} */
 .jumbotron{
     text-align: center;
     font-size: 20px;
@@ -98,15 +98,43 @@ footer{
     color: white;
     text-align: center;
 }
+nav ul.mobile{
+    display: none;
+}
 @media screen and (max-width: 513px){
-    nav{
+    /* nav{
         min-height: 50px;
         padding: 0 20px;
         position: fixed;
         width: 100%;
     }
-    nav ul{
+    nav ul.desktop{
         display: none;
+    } */
+    nav#mobile-display{
+        display: flex;
+        flex-direction: column;
+    }
+    nav div.mobile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dropdown-items{
+        display: none;
+    }
+    .bi-x-lg{
+        display: none;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .bi{
+        margin-left: 0;
+        position: static;
+        z-index: 99;
     }
     figure{
         border: 1px solid #dee2e6;

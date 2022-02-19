@@ -1,18 +1,8 @@
 const humburgerIcon = document.querySelector('.bi-list');
 const closeIcon = document.querySelector('.bi-x-lg');
 const dropdownBtns = document.querySelectorAll('.list-dropdown');
+const dropdownItems = document.querySelector('.dropdown-items');
 
-closeIcon.style.display = 'none';
-
-humburgerIcon.addEventListener('click', function(event){
-    humburgerIcon.style.display = 'none';
-    closeIcon.style.display = 'block';
-})
-
-closeIcon.addEventListener('click', function(event){
-    humburgerIcon.style.display = 'block';
-    closeIcon.style.display = 'none';
-})
 
 for(btn of dropdownBtns){
     btn.addEventListener('click', function(event){
@@ -26,3 +16,15 @@ for(btn of dropdownBtns){
         console.log(listYgDiDapat)
     })
 }
+
+humburgerIcon.addEventListener('click', function(event){
+    closeIcon.style.display = 'block';
+    humburgerIcon.style.display = 'none';
+    dropdownItems.style.display = 'block';
+})
+
+closeIcon.addEventListener('click', function(event){
+    closeIcon.style.display = 'none';
+    humburgerIcon.style.display = 'block';
+    dropdownItems.style.display = 'none';
+})

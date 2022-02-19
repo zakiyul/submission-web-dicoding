@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&family=Shizuru&display=swap');
+/* font-family: 'Shizuru', cursive; */
+/* font-family: 'Fredoka One', cursive; */
+
 html{
     scroll-behavior: smooth;
 }
@@ -6,44 +9,41 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    /* font-family: 'Shizuru', cursive; */
-    /* font-family: 'Fredoka One', cursive; */
 }
 
-/* AWAL HEADER  */
+/* AWAL HEADER=======================================================================================  */
 header{
     /* background-color: darkseagreen; */
     background-color: rgb(46, 36, 36);
 }
-nav{
+nav#desktop-display{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 150px;
     background-color: lightgreen;
     border-bottom: 1px solid rgb(110, 185, 110);
 }
-nav li{
+nav#desktop-display li{
     display: inline;
     margin-right: 20px;
 }
-nav a{
+nav#desktop-display a{
     color: black;
     text-decoration: none;
 }
-nav a:hover{
+nav#desktop-display a:hover{
     color: rgb(61, 61, 61);
 }
+nav#mobile-display{
+    display: none;
+}
 .logo p{
-     font-family: 'Fredoka One', cursive;
+        font-family: 'Fredoka One', cursive;
 }
 .logo span{
     color:  white;
 }
-/* header .bi{
-    margin-left: -300px;
-    position: absolute;
-} */
 .jumbotron{
     text-align: center;
     font-size: 20px;
@@ -57,38 +57,191 @@ nav a:hover{
 .teh-hijau{
     display: none;
 }
-main img{
-    width: 50px;
-}
-/* AKHIR HEADER  */
+/* AKHIR HEADER=======================================================================================  */
 
-/* AWAL OVERVIEW */
-/* .overview{
-    background-color: darkblue;
-    width: 100vw;
-    padding: 0;
+/* main img{
+    width: 50px;
 } */
 
-/* AKHIR OVERVIEW */
+/* AWAL OVERVIEW======================================================================================= */
+article.overview{
+    padding: 100px 150px;
+}
+article.overview h3{
+    text-align: center;
+}
+.overview-image{
+    display: flex;
+}
+.overview-image figure{
+    border: .5px solid rgb(236, 236, 236);
+    border-radius: 16px;
+    padding: 12px;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.overview-image figure:hover{
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transition: all .3s ease-in-out;
+}
+.overview-image img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+}
+.overview-image div{
+    display: flex;
+}
+/* AKHIR OVERVIEW======================================================================================= */
 
-/* AWAL ABOUT */
+/* AWAL ABOUT=========================================================================================== */
+
 #about-article{
     background-color: lightgreen;
-    padding: 0 20px;
+    padding: 100px 150px;
+    display: flex;
+    /* width: 100%; */
+}
+#about-article div:first-child{
+    flex-grow: 2;
+}
+#about-article .content{
+    flex-grow: 1;
+    padding: 0 60px;
+}
+#about-article figure{
+    border: .5px solid rgb(236, 236, 236);
+    border-radius: 16px;
+    padding: 12px;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+}
+#about-article figure:hover{
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transition: all .3s ease-in-out;
 }
 #about-article img{
     width: 100%;
+    border-radius: 16px;
 }
-.list-dropdown div:first-child{
+#about-article h3{
+    font-family: 'Fredoka One', cursive;
+}
+#about-article p{
+    text-indent: 30px;
+    text-align: justify;
+}
+#about-article ul{
+    padding: 0;
+}
+#about-article li{
+    list-style-type: none;
+    background-color: whitesmoke;
+    margin-top: 1px;
+    padding: 12px;
+}
+.list-dropdown div{
+    display: none;
+}
+.Active div{
+    display: block;
+}
+/* AKHIR ABOUT=========================================================================================== */
+#community{
+    padding: 100px 150px;
     display: flex;
-    /* justify-content: space-between; */
 }
-/* AKHIR ABOUT */
-
-#team table, th, td{
+#community .team{
+    display: flex;
+    justify-content: space-evenly;
+}
+#community table, th, td{
     margin-top: 12px;
     /* border: .5px solid #dee2e6; */
     border-collapse: collapse;
+}
+#community h3{
+    font-family: 'Fredoka One', cursive;
+}
+
+#community .team img{
+    border-radius: 50%;
+    width: 100%;
+    max-width: 200px;
+    transition: all .2s ease-in-out;
+}
+#community .team img:hover{
+    opacity: .8;
+}
+#community section:first-child > figure{
+    display: flex;
+    border: .5px solid rgb(236, 236, 236);
+    border-radius: 16px;
+    padding: 10px;
+    transition: all .3s ease-out;
+}
+#community table{
+    /* background-color: rgb(39, 39, 39); */
+    /* padding: 12px; */
+}
+#community th, td{
+    text-align: left;
+    line-height: 32px;
+}
+#community th{
+    margin-top: 32px;
+}
+#community section:first-child > figure:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all .3s ease-in;
+}
+#community section:first-child > figure img{
+    width: 300px;
+    border-radius: 16px 0 0 16px;
+    margin-right: 20px;
+}
+#community ul{
+    padding: 0;
+}
+#community section:last-child li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 2px 40px;
+    margin: 0;
+    background-color: lightgreen;
+    margin-bottom: 12px;
+    border-radius: 24px;
+    transition: all .3s ease-out;
+}
+#community section:last-child li:hover{
+    background-color: rgb(131, 218, 131);
+    transition: all .3s ease-in;
+}
+#community section:last-child a{
+    color: black;
+    text-decoration: none;
+}#community section:last-child a:hover{
+    color: rgb(39, 39, 39);
+}
+#community section:last-child img{
+    width: 50px;
+    margin-right: 12px;
+}
+.team figcaption{
+    /* background-color: gray; */
+    padding: 12px;
+    position: relative;
+    display: none;
+    text-align: center;
+    margin-top: -100px;
+    z-index: 99;
+}
+.team figcaption a{
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -102,18 +255,15 @@ nav ul.mobile{
     display: none;
 }
 @media screen and (max-width: 513px){
-    /* nav{
-        min-height: 50px;
-        padding: 0 20px;
-        position: fixed;
-        width: 100%;
-    }
-    nav ul.desktop{
+    nav#desktop-display{
         display: none;
-    } */
+    }
     nav#mobile-display{
         display: flex;
         flex-direction: column;
+        padding: 0 20px;
+        background-color: lightgreen;
+        border-bottom: 1px solid rgb(110, 185, 110);
     }
     nav div.mobile{
         width: 100%;
@@ -218,6 +368,8 @@ nav ul.mobile{
         display: block;
     }
     /* AKHIR ABOUT */
+
+
     #team{
         padding: 20px;
     }
@@ -245,6 +397,8 @@ nav ul.mobile{
     #team figcaption{
         font-size: 12px;
     }
+
+
     .join ul{
         font-size: 12px;
     }

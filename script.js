@@ -2,9 +2,12 @@ const humburgerIcon = document.querySelector('.bi-list');
 const closeIcon = document.querySelector('.bi-x-lg');
 const dropdownBtns = document.querySelectorAll('.list-dropdown');
 const dropdownItems = document.querySelector('.dropdown-items');
+const teamImgs = document.querySelectorAll('.team-img');
+const teamSeeMores = document.querySelectorAll('.team-seeMore')
 
 
-for(btn of dropdownBtns){
+
+for(let btn of dropdownBtns){
     btn.addEventListener('click', function(event){
         const listYgDiDapat = event.target;
         if(listYgDiDapat.classList.contains("Active")){
@@ -28,3 +31,19 @@ closeIcon.addEventListener('click', function(event){
     humburgerIcon.style.display = 'block';
     dropdownItems.style.display = 'none';
 })
+
+
+for(let [index, teamImg ]of teamImgs.entries()){
+    teamImg.addEventListener('mouseenter', function(event){
+        teamSeeMores[index].style.display = 'block'
+    })
+    teamImg.addEventListener('mouseleave', function(event){
+        teamSeeMores[index].style.display = 'none'
+    })
+    teamSeeMores[index].addEventListener('mouseenter', function(event){
+        teamSeeMores[index].style.display = 'block'
+    })
+    teamSeeMores[index].addEventListener('mouseleave', function(event){
+        teamSeeMores[index].style.display = 'none'
+    })
+}

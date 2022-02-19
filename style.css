@@ -21,6 +21,7 @@ nav{
     align-items: center;
     padding: 0 40px;
     background-color: lightgreen;
+    border-bottom: 1px solid rgb(110, 185, 110);
 }
 nav li{
     display: inline;
@@ -84,6 +85,12 @@ main img{
 }
 /* AKHIR ABOUT */
 
+#team table, th, td{
+    margin-top: 12px;
+    /* border: .5px solid #dee2e6; */
+    border-collapse: collapse;
+}
+
 
 footer{
     padding: 12px 0;
@@ -134,10 +141,20 @@ footer{
     .overview-image{
 
         display: flex;
-        /* flex-direction: column; */
+    }
+    .overview-image figure{
+        transition: all .3s ease-in-out;
+    }
+    .overview-image figure:hover{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all .3s ease-in-out;
     }
     .teh-hijau{
         display: block;
+    }
+
+    footer{
+        font-size: 12px;
     }
 
 
@@ -173,4 +190,49 @@ footer{
         display: block;
     }
     /* AKHIR ABOUT */
+    #team{
+        padding: 20px;
+    }
+    #team h3{
+        font-family: 'Fredoka One', cursive;
+    }
+    .team img{
+        border-radius: 50%;
+    }
+    #team section:last-child{
+        margin-top: 20px;
+    }
+    #team section:last-child figure{
+        margin: 0;
+        width: 90%;
+        transition: all .3s ease-in-out;
+    }
+    #team section:last-child figure:hover{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all .3s ease-in-out;
+    }
+    #team section:last-child img{
+        border-radius: 5px 5px 0 0;
+    }
+    #team figcaption{
+        font-size: 12px;
+    }
+    .join ul{
+        font-size: 12px;
+    }
+    .join li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+    .join a{
+        color: black;
+        text-decoration: none;
+    }.join a:hover{
+        color: rgb(39, 39, 39);
+    }
+    .join img{
+        width: 25px;
+        margin-right: 12px;
+    }
 }

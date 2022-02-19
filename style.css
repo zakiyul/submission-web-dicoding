@@ -59,16 +59,13 @@ nav#mobile-display{
 }
 /* AKHIR HEADER=======================================================================================  */
 
-/* main img{
-    width: 50px;
-} */
-
 /* AWAL OVERVIEW======================================================================================= */
 article.overview{
     padding: 100px 150px;
 }
 article.overview h3{
     text-align: center;
+    font-family: 'Fredoka One', cursive;
 }
 .overview-image{
     display: flex;
@@ -182,10 +179,6 @@ article.overview h3{
     padding: 10px;
     transition: all .3s ease-out;
 }
-#community table{
-    /* background-color: rgb(39, 39, 39); */
-    /* padding: 12px; */
-}
 #community th, td{
     text-align: left;
     line-height: 32px;
@@ -211,7 +204,7 @@ article.overview h3{
     align-items: center;
     padding: 2px 40px;
     margin: 0;
-    background-color: lightgreen;
+    background-color: rgb(46, 36, 36);
     margin-bottom: 12px;
     border-radius: 24px;
     transition: all .3s ease-out;
@@ -221,7 +214,7 @@ article.overview h3{
     transition: all .3s ease-in;
 }
 #community section:last-child a{
-    color: black;
+    color: white;
     text-decoration: none;
 }#community section:last-child a:hover{
     color: rgb(39, 39, 39);
@@ -274,6 +267,18 @@ nav ul.mobile{
     .dropdown-items{
         display: none;
     }
+    ul.dropdown-items{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 12px;
+    }
+    .dropdown-items li{
+        list-style: none;
+    }
+    .dropdown-items a{
+        color: black;
+        text-decoration: none;
+    }
     .bi-x-lg{
         display: none;
     }
@@ -308,8 +313,7 @@ nav ul.mobile{
     .jumbotron p{
         display: none;
     }
-    .overview{
-        /* background-color: darkmagenta; */
+    article.overview{
         text-align: center;
         padding: 12px 0;
     }
@@ -321,11 +325,16 @@ nav ul.mobile{
         display: flex;
     }
     .overview-image figure{
+        padding: 5px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
         transition: all .3s ease-in-out;
     }
     .overview-image figure:hover{
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition: all .3s ease-in-out;
+    }
+    .overview-image div{
+        display: block;
     }
     .teh-hijau{
         display: block;
@@ -339,7 +348,8 @@ nav ul.mobile{
     /* AWAL ABOUT */
     #about-article{
         background-color: lightgreen;
-        padding: 20px;
+        padding: 5px;
+        display: block;
     }
     #about-article img{
         width: 100%;
@@ -370,34 +380,71 @@ nav ul.mobile{
     /* AKHIR ABOUT */
 
 
-    #team{
+    #community{
         padding: 20px;
+        display: block;
     }
-    #team h3{
+    #community h3{
         font-family: 'Fredoka One', cursive;
     }
     .team img{
         border-radius: 50%;
+        width: 50px;
+        margin: 0 auto;
+        display: block;
     }
-    #team section:last-child{
+    .team figure{
+        border: 0;
+    }
+    #community section:first-child > figure{
+        display: flex;
+        flex-direction: column;
+        border: .5px solid rgb(236, 236, 236);
+        /* border-radius: 16px;
+        padding: 10px;
+        transition: all .3s ease-out; */
+    }
+    #community section:first-child > figure img{
+        width: 100%;
+        border-radius: 16px;
+        margin-right: 0;
+    }
+    #community th, td{
+        text-align: left;
+        line-height: 15px;
+    }
+    #community section:last-child{
         margin-top: 20px;
     }
-    #team section:last-child figure{
+    #community section:last-child figure{
         margin: 0;
         width: 90%;
         transition: all .3s ease-in-out;
     }
-    #team section:last-child figure:hover{
+    #community section:last-child figure:hover{
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition: all .3s ease-in-out;
     }
-    #team section:last-child img{
+    #community section:last-child img{
         border-radius: 5px 5px 0 0;
     }
-    #team figcaption{
+    #community figcaption{
         font-size: 12px;
     }
-
+    #community section:last-child li{
+        background-color: white;
+    }
+    #community section:last-child img{
+        width: 25px;
+        margin-right: 12px;
+    }
+    #community .team{
+        display: flex;
+        flex-direction: column;
+    }
+    .team figcaption{
+        margin-top: -65px;
+    }
 
     .join ul{
         font-size: 12px;
@@ -406,9 +453,10 @@ nav ul.mobile{
         list-style-type: none;
         display: flex;
         align-items: center;
+        background-color: white;
     }
     .join a{
-        color: black;
+        color: black !important;
         text-decoration: none;
     }.join a:hover{
         color: rgb(39, 39, 39);

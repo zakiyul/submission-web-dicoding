@@ -198,7 +198,7 @@ article.overview h3{
 #community ul{
     padding: 0;
 }
-#community section:last-child li{
+#community aside li{
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -209,17 +209,17 @@ article.overview h3{
     border-radius: 24px;
     transition: all .3s ease-out;
 }
-#community section:last-child li:hover{
+#community aside li:hover{
     background-color: rgb(131, 218, 131);
     transition: all .3s ease-in;
 }
-#community section:last-child a{
+#community aside a{
     color: white;
     text-decoration: none;
-}#community section:last-child a:hover{
+}#community aside a:hover{
     color: rgb(39, 39, 39);
 }
-#community section:last-child img{
+#community aside img{
     width: 50px;
     margin-right: 12px;
 }
@@ -236,7 +236,9 @@ article.overview h3{
     color: white;
     text-decoration: none;
 }
+aside.join img{
 
+}
 
 footer{
     padding: 12px 0;
@@ -413,28 +415,28 @@ nav ul.mobile{
         text-align: left;
         line-height: 15px;
     }
-    #community section:last-child{
+    #community aside{
         margin-top: 20px;
     }
-    #community section:last-child figure{
+    #community aside figure{
         margin: 0;
         width: 90%;
         transition: all .3s ease-in-out;
     }
-    #community section:last-child figure:hover{
+    #community aside figure:hover{
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition: all .3s ease-in-out;
     }
-    #community section:last-child img{
+    #community aside img{
         border-radius: 5px 5px 0 0;
     }
     #community figcaption{
         font-size: 12px;
     }
-    #community section:last-child li{
+    #community aside li{
         background-color: white;
     }
-    #community section:last-child img{
+    #community aside img{
         width: 25px;
         margin-right: 12px;
     }
